@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leah Sharma</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Contact</a></li>
+                    
+            </ul>
+            
+        </nav>
+        <div class="header-text">
+            <p>Electrical Engineering Student</p>
+            <h1>Hey there!<br> I'm <span>Leah</span> Sharma</h1>
+        </div>
+    </div>
+<!-- -------------about------------- -->
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/leeb_creature.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+<!-- edit your about me here -->
+                <p>hell yeah filler text?</p>
+                <div class="tab-titles">
+                    <!-- these are the tab thingies, edit here  -->
+                    <p class='tab-links active-link'onclick="opentab('skills')">Skills</p>
+                    <p class='tab-links' onclick="opentab('experience')">Experience</p>
+                    <p class='tab-links'onclick="opentab('education')">Education & Certifications</p>
+                </div>
+                <!-- skillz tab -->
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Python</span><br>MySQL, MongoDB, pyTorch</li>
+                        <li><span>Circuit Design</span><br>Circuit assembly, c++, Verilog, Altium</li>
+                        <li><span>CAD</span><br>Autodesk Inventor, SOLIDWORKS</li>
+                    </ul>
+                </div>
+                <!-- experience tab  -->
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024-Current</span><br>Headstarter AI Software Engineering Fellow</li>
+                        <li><span>2023-Current</span><br>Drivetrain/Data Acquisition Team Member @ McMaster Baja Racing</li>
+                        <li><span>2022-Current</span><br>Freelance Guitar Pedal Manufacturing</li>
+                    </ul>
+                </div>
+                <!-- education tab  -->
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-2028</span><br>B.Eng in Electrical Engineering @ McMaster University</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------portfolio projects and such here -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work_lol.jpg">
+                <div class="layer">
+                    <h3>Moke</h3>
+                    <p>yeah thats a monkey</p>
+                    <a href="#"></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work_lol2.jpg">
+                <div class="layer">
+                    <h3>Monke</h3>
+                    <p>yeah thats also a monkey</p>
+                    <a href="#"></a>
+            </div>
+            <div class="work">
+                <img src="images/work_lol3.jpg">
+                <div class="layer">
+                    <h3>stil moke</h3>
+                    <p>yhmm</p>
+                    <a href="#"></a>
+            </div>
+        </div>
+    </div>
+
+ </div>
+<script>
+// for displaying the tabs at the correct times using an event (click) to get em. this is written in javascript btw
+var tablinks = document.getElementsByClassName('tab-links');
+var tabcontents = document.getElementsByClassName('tab-contents');
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    // adds the activelink class to the tab thats been evented on(clicked) so it lights up
+    document.getElementById(tabname).classList.add("active-tab");
+    // grabs the corresponding text and gives it the talking stick (the active tab class)
+}
+</script>
+</body>
+</html>
